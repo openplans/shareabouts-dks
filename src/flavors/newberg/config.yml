@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Dundee Transportation System Plan Update
+  title: Newberg Transportation System Plan Update
   # Header name
-  name: Dundee Transportation System Plan Update
+  name: Newberg Transportation System Plan Update
   # Meta description that will show up in Google search results
-  meta_description: _(Tell us what you think about the Transportation System in Dundee by adding comments to the map!)
+  meta_description: _(Tell us what you think about the Transportation System in Newberg County by adding comments to the map!)
 
   # When the map loads, existing places will be loaded in chunks. By default,
   # the size of the chunks will be a reasonable default dictated by the API
@@ -18,8 +18,8 @@ map:
   geolocation_onload: false
   options:
     center:
-      lat: 45.277810823859966
-      lng: -123.0128232773859
+      lat: 36.68700889896878
+      lng: -91.44346899760421
     zoom: 15
     minZoom: 13
     maxZoom: 17
