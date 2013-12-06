@@ -58,11 +58,11 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "bicycle"'
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/markers/dot-4ab767.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/markers/marker-4ab767.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -72,11 +72,11 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "transit"'
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/markers/dot-e1264d.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/markers/marker-e1264d.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -86,11 +86,11 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "vehicle"'
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/markers/dot-f95016.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/markers/marker-f95016.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -100,11 +100,11 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "freight"'
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/markers/dot-70d52c.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/markers/marker-70d52c.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -114,11 +114,11 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "other"'
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/markers/dot-d849e0.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/markers/marker-d849e0.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
