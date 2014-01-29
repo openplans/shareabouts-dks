@@ -46,6 +46,7 @@
             <h4 class="reply-header">{{ title }}</h4>
             <form id="new_response" class="new_response clearfix" action="#" method="post">
               <input type="hidden" name="visible" value="on">
+              <input type="hidden" name="user_token" value="{{{ user_token }}}">
 
               <fieldset>
               {{#survey_config.items}}
@@ -80,12 +81,20 @@
                     {{/is_textarea}}
                     {{#is_select}}
                     <select id="survey-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
-                      {{# options }}
-                        <option value="{{.}}">{{.}}</option>
-                      {{/ options }}
+                    {{# options }}
+                      {{#if label}}
+                      <option value="{{value}}">{{label}}</option>
+                      {{else}}
+                      <option value="{{.}}">{{.}}</option>
+                      {{/if}}
+                    {{/ options }}
                     </select>
                     {{/is_select}}
                   </div>
+
+                  {{#if help_text }}
+                  <div class="help-text place-{{ name }}-help-text">{{ help_text }}</div>
+                  {{/if}}
                 </div>
 
               {{/survey_config.items}}
