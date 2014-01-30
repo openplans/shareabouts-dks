@@ -18,18 +18,18 @@
   display: none;
   font-family: "Helvetica Neue", Arial, Helvetica, serif;
   text-decoration: none;
-  color: #6D4D78;
+  color: #1A007E;
   text-shadow: none;
   font-size: 0.5em;
 }
 
 .site-heading a:link,
 .site-heading a:visited {
-  color: #6D4D78;
+  color: #1A007E;
 }
 
 #site-title a:hover {
-  color: #6D4D78;
+  color: #1A007E;
 }
 
 #site-header {

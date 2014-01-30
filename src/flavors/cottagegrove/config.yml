@@ -31,10 +31,10 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  pedestrian:
-    label: _(Pedestrian issue)
+  safety:
+    label: _(Safety issue)
     rules:
-      - condition: '"{{location_type}}" === "pedestrian"'
+      - condition: '"{{location_type}}" === "safety"'
         icon:
           iconUrl: /static/css/images/markers/dot-0d85e9.png
           iconSize: [17, 18]
@@ -45,10 +45,10 @@ place_types:
           iconSize: [25, 41]
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
-  bicycle:
-    label: _(Bicycle issue)
+  access:
+    label: _(Ease of access issue)
     rules:
-      - condition: '"{{location_type}}" === "bicycle"'
+      - condition: '"{{location_type}}" === "access"'
         icon:
           iconUrl: /static/css/images/markers/dot-4ab767.png
           iconSize: [17, 18]
@@ -59,10 +59,10 @@ place_types:
           iconSize: [25, 41]
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
-  transit:
-    label: _(Transit issue)
+  delay:
+    label: _(Delay issue)
     rules:
-      - condition: '"{{location_type}}" === "transit"'
+      - condition: '"{{location_type}}" === "delay"'
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
           iconSize: [17, 18]
@@ -73,10 +73,10 @@ place_types:
           iconSize: [25, 41]
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
-  vehicle:
-    label: _(Motor vehicle issue)
+  comfort:
+    label: _(Comfort issue)
     rules:
-      - condition: '"{{location_type}}" === "vehicle"'
+      - condition: '"{{location_type}}" === "comfort"'
         icon:
           iconUrl: /static/css/images/markers/dot-f95016.png
           iconSize: [17, 18]
@@ -87,20 +87,6 @@ place_types:
           iconSize: [25, 41]
           shadowSize: [41, 41]
           iconAnchor: [12, 41] 
-  freight:
-    label: _(Freight issue)
-    rules:
-      - condition: '"{{location_type}}" === "freight"'
-        icon:
-          iconUrl: /static/css/images/markers/dot-70d52c.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-        focus_icon:
-          iconUrl: /static/css/images/markers/marker-70d52c.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
   other:
     label: _(Other issue)
     rules:
@@ -127,7 +113,7 @@ place:
   help_text: _(What do you like or don’t like? What problems do you see with safety, congestion, accessibility, or connectivity?)
   action_text: _(commented)
   title: _(Tell us about this location)
-  action_text: _(created)
+  action_text: _(identified)
   anonymous_name: _(Someone)
   submit_button_label: _(Share my comments)
   items:
@@ -148,22 +134,20 @@ place:
         - key: size
           value: 30
         - key: required
-    - prompt: _(What mode of transportation?)
+    - prompt: _(What kind of problem?)
       type: select
       options:
         - label: _(Choose One)
           value: ''
-        - label: _(Pedestrian)
-          value: pedestrian
-        - label: _(Bicycle)
-          value: bicycle
-        - label: _(Transit)
-          value: transit
-        - label: _(Motor Vehicle)
-          value: vehicle
-        - label: _(Freight)
-          value: freight
-        - label: _(Other)
+        - label: _(Safety issue)
+          value: safety
+        - label: _(Ease of Access issue)
+          value: access
+        - label: _(Delay issue)
+          value: delay
+        - label: _(Comfort issue)
+          value: comfort
+        - label: _(Other issue)
           value: other
       name: location_type
       attrs:
