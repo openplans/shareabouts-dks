@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Lane County Transportation System Plan
+  title: Cottage Grove Transportation System Plan
   # Header name
-  name: Lane County Transportation System Plan
+  name: Cottage Grove Transportation System Plan
   # Meta description that will show up in Google search results
-  meta_description: _(Tell us what you think about the Transportation System in Lane County by adding comments to the map!)
+  meta_description: _(Tell us what you think about the Transportation System in Cottage Grove by adding comments to the map.  Your input matters!)
 
   # When the map loads, existing places will be loaded in chunks. By default,
   # the size of the chunks will be a reasonable default dictated by the API
@@ -18,11 +18,11 @@ map:
   geolocation_onload: false
   options:
     center:
-      lat: 43.961009199850594
-      lng: -122.66182270017453
-    zoom: 11
-    minZoom: 9
-    maxZoom: 15
+      lat: 43.79762300056434
+      lng: -123.05952460155822
+    zoom: 14
+    minZoom: 13
+    maxZoom: 16
   layers:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
