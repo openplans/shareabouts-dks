@@ -210,6 +210,7 @@ survey:
 
 support:
   submission_type: support
+  support_label_plural: supports
   submit_btn_text: _(Support)
   action_text: supported
   anonymous_name: _(Someone)
