@@ -1,0 +1,10 @@
+Thanks for sharing your comments about {{ place.properties.name }}.
+
+Your input helps us to develop better solutions for the transportation system in Cottage Grove.
+
+We hope to see you at the next TSP community event!
+
+Amanda Ferguson
+
+City Planner
+City of Cottage Grove

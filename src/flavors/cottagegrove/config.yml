@@ -198,6 +198,10 @@ support:
   action_text: supported
   anonymous_name: _(Someone)
 
+notifications:
+  on_new_place: true
+  submitter_email_field: "private-email"
+
 pages:
   - title: _(About)
     slug: about
