@@ -36,6 +36,23 @@
   background-color: white;
 }
 
+
+/* submission confirmation message */
+
+.submission-confirmation {
+  background-color: #e5ffcc;
+  padding: 1em ;
+  margin: 0 0 1em;
+}
+.submission-confirmation p {
+  margin-bottom: 0 !important;
+  font-size: 0.85em;
+}
+.submission-confirmation strong {
+  display: block;
+  font-size: 1.5em;
+}
+
 /* =Media Queries
 -------------------------------------------------------------- */
 

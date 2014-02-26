@@ -127,7 +127,7 @@ place:
   help_text: _(What do you like or don’t like? What problems do you see with safety, congestion, accessibility, or connectivity?)
   action_text: _(commented)
   title: _(Tell us about this location)
-  action_text: _(created)
+  action_text: _(identified)
   anonymous_name: _(Someone)
   submit_button_label: _(Share my comments)
   items:
@@ -182,6 +182,11 @@ place:
           value: _(Email)
         - key: size
           value: 30
+    - type: hidden
+      name: private-submitted
+      attrs:
+        - key: value
+          value: 1
 
 survey:
   submission_type: comments
