@@ -12,7 +12,7 @@ from django.shortcuts import render
 from django.conf import settings
 from django.core.cache import cache
 from django.core.mail import EmailMultiAlternatives
-from django.template import TemplateDoesNotExist
+from django.template import TemplateDoesNotExist, RequestContext
 from django.template.loader import render_to_string
 from django.utils.timezone import now
 from django.views.decorators.csrf import ensure_csrf_cookie
@@ -59,21 +59,13 @@ class ShareaboutsApi (object):
 
 
 @ensure_csrf_cookie
-def index(request, default_place_type):
-
+def index(request, place_id=None):
     # Load app config settings
     config = get_shareabouts_config(settings.SHAREABOUTS.get('CONFIG'))
     config.update(settings.SHAREABOUTS.get('CONTEXT', {}))
 
     # Get initial data for bootstrapping into the page.
     api = ShareaboutsApi(dataset_root=settings.SHAREABOUTS.get('DATASET_ROOT'))
-
-    # Handle place types in case insensitive way (park works just like Park)
-    lower_place_types = [k.lower() for k in config['place_types'].keys()]
-    if default_place_type.lower() in lower_place_types:
-        validated_default_place_type = default_place_type
-    else:
-        validated_default_place_type = ''
 
     # Get the content of the static pages linked in the menu.
     pages_config = config.get('pages', [])
@@ -98,17 +90,25 @@ def index(request, default_place_type):
     user_agent = httpagentparser.detect(user_agent_string)
     user_agent_json = json.dumps(user_agent)
 
+    place = None
+    if place_id:
+        place = api.get('places/' + place_id)
+        if place:
+            place = json.loads(place)
+
     context = {'config': config,
 
                'user_token_json': user_token_json,
                'pages_config': pages_config,
                'pages_config_json': pages_config_json,
                'user_agent_json': user_agent_json,
-               'default_place_type': validated_default_place_type,
+               # Useful for customized meta tags
+               'place': place,
 
                'API_ROOT': api.root,
                'DATASET_ROOT': api.dataset_root,
                }
+
     return render(request, 'index.html', context)
 
 
@@ -123,7 +123,7 @@ def place_was_created(request, path, response):
 def send_place_created_notifications(request, response):
     config = get_shareabouts_config(settings.SHAREABOUTS.get('CONFIG'))
     config.update(settings.SHAREABOUTS.get('CONTEXT', {}))
-    
+
     # Before we start, check whether we're configured to send at all on new
     # place.
     should_send = config.get('notifications', {}).get('on_new_place', False)
@@ -169,8 +169,15 @@ def send_place_created_notifications(request, response):
     if not recipient_email:
         return
 
+    # Set optional values
+    bcc_list = getattr(settings, 'EMAIL_NOTIFICATIONS_BCC', [])
+
     # If we didn't find any errors, then render the email and send.
-    context_data = {'place': place, 'email': recipient_email, 'config': config, 'request': request}
+    context_data = RequestContext(request, {
+        'place': place,
+        'email': recipient_email,
+        'config': config,
+    })
     subject = render_to_string('new_place_email_subject.txt', context_data)
     body = render_to_string('new_place_email_body.txt', context_data)
 
@@ -192,12 +199,13 @@ def send_place_created_notifications(request, response):
         subject,
         body,
         from_email,
-        [recipient_email])#,
+        to=[recipient_email],
+        bcc=bcc_list)#,
         # connection=connection)
 
     if html_body:
         msg.attach_alternative(html_body, 'text/html')
-    
+
     msg.send()
     return
 

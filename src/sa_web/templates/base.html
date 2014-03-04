@@ -18,6 +18,9 @@
   <meta name="description" content="{{ config.app.meta_description }}">
   <meta name="author" content="OpenPlans.org">
 
+  <!-- Social Media meta tags and such -->
+  {% block meta %}{% endblock %}
+
   <!-- Mobile Viewport Fix -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,10 +36,10 @@
   <link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/default.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/default.css?deployed_at={{ settings.LAST_DEPLOY_DATE|urlencode:'' }}">
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="{{ config.static_url }}css/custom.css">
+  <link rel="stylesheet" href="{{ config.static_url }}css/custom.css?deployed_at={{ settings.LAST_DEPLOY_DATE|urlencode:'' }}">
 
   <link rel="profile" href="http://gmpg.org/xfn/11" />
 
