@@ -53,6 +53,10 @@
   font-size: 1.5em;
 }
 
+.close-link {
+  text-decoration: underline;
+}
+
 /* =Media Queries
 -------------------------------------------------------------- */
 

@@ -123,13 +123,13 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Add a comment)
+  add_button_label: _(Identify an issue)
   help_text: _(What do you like or don’t like? What problems do you see with safety, congestion, accessibility, or connectivity?)
   action_text: _(commented)
   title: _(Tell us about this location)
   action_text: _(identified)
   anonymous_name: _(Someone)
-  submit_button_label: _(Share my comments)
+  submit_button_label: _(Save to map)
   items:
     - prompt: _(Your Name)
       type: text
@@ -168,7 +168,7 @@ place:
       name: location_type
       attrs:
         - key: required
-    - prompt: _(Tell us about this location.)
+    - prompt: _(Tell us about this issue.)
       type: textarea
       name: description
       attrs:
