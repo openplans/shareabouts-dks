@@ -123,13 +123,15 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Identify an issue)
+  add_button_label: _(Add a comment)
   help_text: _(What do you like or don’t like? What problems do you see with safety, congestion, accessibility, or connectivity?)
+  show_list_button_label: _(List All Comments)
+  show_map_button_label: _(Show Comments on Map)
   action_text: _(commented)
   title: _(Tell us about this location)
   action_text: _(identified)
   anonymous_name: _(Someone)
-  submit_button_label: _(Save to map)
+  submit_button_label: _(Add this comment)
   items:
     - prompt: _(Your Name)
       type: text
@@ -148,6 +150,7 @@ place:
         - key: size
           value: 30
         - key: required
+          value: true
     - prompt: _(What mode of transportation?)
       type: select
       options:
@@ -193,18 +196,18 @@ survey:
 
   # Response config
   show_responses: true
-  response_name: _(comment)
-  response_plural_name: _(comments)
-  action_text: _(commented on)
+  response_name: _(reply)
+  response_plural_name: _(replies)
+  action_text: _(replied on)
   anonymous_name: _(Someone)
 
   # Survey form config
-  title: _(Leave a Comment)
-  form_link_text: _(Leave a Comment)
-  submit_btn_text: _(Comment)
+  title: _(Leave a Reply)
+  form_link_text: _(Leave a Reply)
+  submit_btn_text: _(Reply)
   items:
-    - prompt: _(Comment)
-      label: _(Comment)
+    - prompt: _(Reply)
+      label: _(Reply)
       type: textarea
       name: comment
       attrs:
@@ -225,3 +228,6 @@ pages:
     slug: about
     name: overview
     start_page: true
+  - title: _(Project website)
+    external: true
+    url: http://lanecountytsp.org/
