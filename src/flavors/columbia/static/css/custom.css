@@ -8,11 +8,55 @@
 /* =Header
 -------------------------------------------------------------- */
 
+#site-header {
+  color: #000;
+  background-color: #fff;
+}
+#site-title {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: none;
+}
+#site-title a:link,
+#site-title a:visited {
+  display: block;
+  position: relative;
+  color: #000;
+  font-size: 1.5em;
+}
+#site-title a:hover {
+  color: #000;
+}
+#site-logo {
+  float: left;
+  height: 2.75em;
+  margin-right: 0.5em;
+}
+#site-tagline {
+  display: none;
+  float: left;
+  max-width: 10em;
+  position: relative;
+  top: 0.25em;
+}
+
+
+
+/* list view */
+
+  /* List View Button */
+  .list-toggle-nav {
+    font-size: 1em;
+    float: left;
+  }
 
 /* =Media Queries
 -------------------------------------------------------------- */
 
 @media only screen and (min-width: 768px) {
+  .site-heading {
+    display: inline;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
