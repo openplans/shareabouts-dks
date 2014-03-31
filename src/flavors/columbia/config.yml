@@ -162,7 +162,7 @@ place:
           value: other
     - prompt: _(Describe the location)
       type: text
-      name: placename
+      name: name
       attrs:
         - key: size
           value: 30
