@@ -198,7 +198,7 @@ survey:
   show_responses: true
   response_name: _(reply)
   response_plural_name: _(replies)
-  action_text: _(replied on)
+  action_text: _(reply)
   anonymous_name: _(Someone)
 
   # Survey form config

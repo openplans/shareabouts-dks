@@ -49,6 +49,14 @@
     font-size: 1em;
     float: left;
   }
+  
+/* media buttons */
+.dks-menu-desktop {
+  width: 18em;
+  float: right;
+  display: none;
+  text-decoration: none;
+}
 
 /* =Media Queries
 -------------------------------------------------------------- */
@@ -57,10 +65,21 @@
   .site-heading {
     display: inline;
   }
+
 }
 
 @media only screen and (min-width: 1024px) {
+  .dks-menu-mobile {
+    display: none;
+  }
+  .dks-menu-desktop {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1300px) {
+  .dks-menu-mobile {
+    display: none;
+  }
+  
 }
