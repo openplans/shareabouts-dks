@@ -40,46 +40,53 @@
   top: 0.25em;
 }
 
-
+/* Sign In Menu */
+#sign-in-btn {
+  color: #007fbf;
+}
+#sign-in-btn:hover {
+  color: #00aaff;
+}
 
 /* list view */
-
-  /* List View Button */
-  .list-toggle-nav {
-    font-size: 1em;
-    float: left;
-  }
-  
-/* media buttons */
-.dks-menu-desktop {
-  width: 18em;
-  float: right;
-  display: none;
-  text-decoration: none;
+.list-toggle-nav {
+  float: left;
+}
+.list-toggle-btn,
+.list-toggle-btn:visited,
+.list-toggle-btn:link {
+  background-color: #ccc;
+  color: #007fbf;
+}
+.list-toggle-btn:hover {
+  background-color: #007fbf;
+  color: #fff;
 }
 
-/* =Media Queries
--------------------------------------------------------------- */
 
-@media only screen and (min-width: 768px) {
-  .site-heading {
-    display: inline;
+@media only screen and (min-width: 60em) {
+
+  #sign-in-btn {
+    font-size: 0.75em;
+    color: #000;
+    padding: 0;
+    margin: 0.5em 0.75em 0 0;
+    width: 18em;
+    text-align: center;
+    z-index: 2;
   }
-
-}
-
-@media only screen and (min-width: 1024px) {
-  .dks-menu-mobile {
-    display: none;
-  }
-  .dks-menu-desktop {
+  .sign-in-menu {
     display: block;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 0.75em;
+    padding: 2.75em 1.5em 0 0;
+    top: 0;
+    right: 0;
   }
-}
-
-@media only screen and (min-width: 1300px) {
-  .dks-menu-mobile {
+  .sign-in-menu:before {
     display: none;
   }
-  
+
 }
