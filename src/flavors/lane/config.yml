@@ -24,6 +24,7 @@ map:
     minZoom: 9
     maxZoom: 15
   layers:
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.LaneCounty2/{z}/{x}/{y}.png
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
     - url: http://{s}.tiles.mapbox.com/v3/openplans.154-DKS-Lane-County/{z}/{x}/{y}.png
@@ -122,7 +123,7 @@ activity:
   interval: 30000
 
 place:
-  adding_supported: true
+  adding_supported: false
   add_button_label: _(Add a comment)
   help_text: _(What do you like or don’t like? What problems do you see with safety, congestion, accessibility, or connectivity?)
   show_list_button_label: _(List All Comments)
