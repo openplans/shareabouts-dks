@@ -16,6 +16,7 @@ app:
 map:
   geolocation_enabled: true
   geolocation_onload: false
+  geocoding_enabled: true
   options:
     center:
       lat: 43.961009199850594
@@ -24,10 +25,9 @@ map:
     minZoom: 9
     maxZoom: 15
   layers:
-    - url: http://{s}.tiles.mapbox.com/v3/openplans.LaneCounty2/{z}/{x}/{y}.png
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-    - url: http://{s}.tiles.mapbox.com/v3/openplans.154-DKS-Lane-County/{z}/{x}/{y}.png
+    - url: http://{s}.tiles.mapbox.com/v3/openplans.LaneCounty2/{z}/{x}/{y}.png
 
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
